@@ -7,19 +7,29 @@ interface NavLinkItem {
 }
 
 const links: NavLinkItem[] = [
-  { label: "Docs", href: "/docs/overview" },
-  { label: "API", href: "/api/refresh-token" },
-  { label: "Changelog", href: "/changelog" },
+  { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const NavLinks = () => {
   const location = useLocation();
 
   const isActive = (href: string) => {
-    if (href.startsWith("/docs")) return location.pathname.startsWith("/docs");
-    if (href.startsWith("/api")) return location.pathname.startsWith("/api");
-    if (href.startsWith("/changelog")) return location.pathname.startsWith("/changelog");
-    return false;
+    const hash = location.hash;
+    return hash === href;
+  };
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", href);
+      }
+    }
   };
 
   return (
@@ -28,8 +38,9 @@ const NavLinks = () => {
         <Link
           key={link.label}
           to={link.href}
+          onClick={(e) => handleClick(e, link.href)}
           className={cn(
-            "px-3 py-2 text-sm font-medium transition-colors rounded-xl",
+            "px-3 py-2 text-sm font-medium transition-colors rounded-xl font-heading",
             isActive(link.href) ? "text-foreground" : "text-muted-foreground hover:text-foreground"
           )}
         >
