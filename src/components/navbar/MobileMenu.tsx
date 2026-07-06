@@ -1,7 +1,6 @@
-import { Menu, Search } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
-import { useSearch } from "@/contexts/SearchContext";
 
 interface NavLinkItem {
   label: string;
@@ -9,34 +8,30 @@ interface NavLinkItem {
 }
 
 const mainLinks: NavLinkItem[] = [
-  { label: "Docs", href: "/docs/overview" },
-  { label: "API", href: "/api/refresh-token" },
-  { label: "Changelog", href: "/changelog" },
+  { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
+  { label: "Contact", href: "#contact" },
 ];
-
 
 const MobileMenu = () => {
   const location = useLocation();
-  const { openSearch } = useSearch();
 
-  const isActive = (href: string) => {
-    if (href.startsWith("/docs")) return location.pathname.startsWith("/docs");
-    if (href.startsWith("/api")) return location.pathname.startsWith("/api");
-    return location.pathname === href;
+  const isActive = (href: string) => location.hash === href;
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", href);
+      }
+    }
   };
 
   return (
     <div className="lg:hidden flex items-center gap-2">
-      {/* Search Button */}
-      <button
-        onClick={openSearch}
-        className="flex items-center justify-center w-10 h-10 rounded-xl border border-border text-muted-foreground transition-colors hover:text-foreground hover:border-muted-foreground/50"
-        aria-label="Search"
-      >
-        <Search className="w-5 h-5" />
-      </button>
-
-      {/* Mobile Menu */}
       <Sheet>
         <SheetTrigger asChild>
           <button
@@ -48,15 +43,15 @@ const MobileMenu = () => {
         </SheetTrigger>
         <SheetContent side="right" className="w-[300px] bg-background border-border">
           <SheetHeader>
-            <SheetTitle className="text-foreground">Menu</SheetTitle>
+            <SheetTitle className="text-foreground font-heading">Menu</SheetTitle>
           </SheetHeader>
           <nav className="flex flex-col gap-2 mt-8">
-            {/* Main Navigation Links */}
             {mainLinks.map((link) => (
               <Link
                 key={link.label}
                 to={link.href}
-                className={`px-4 py-3 text-base font-medium rounded-xl transition-colors ${
+                onClick={(e) => handleClick(e, link.href)}
+                className={`px-4 py-3 text-base font-medium rounded-xl transition-colors font-heading ${
                   isActive(link.href)
                     ? "text-foreground bg-secondary"
                     : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
