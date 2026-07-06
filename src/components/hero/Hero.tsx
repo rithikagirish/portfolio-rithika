@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Hls from "hls.js";
 import { ChevronRight, Download, ArrowDown } from "lucide-react";
 import WaveText from "@/components/ui/wave-text";
+import resumeAsset from "@/assets/rithika-resume.pdf.asset.json";
 
 const VIDEO_SRC =
   "https://customer-cbeadsgr09pnsezs.cloudflarestream.com/74cb72d57c6a6d6d7807693d02e6707b/manifest/video.m3u8";
@@ -132,9 +133,8 @@ const Hero = () => {
             <ChevronRight className="w-4 h-4" />
           </a>
           <a
-            href="https://drive.google.com/file/d/1G_Rithika_Resume_1-07-2026/view"
-            target="_blank"
-            rel="noopener noreferrer"
+            href={resumeAsset.url}
+            download
             className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-foreground bg-secondary hover:bg-secondary/80 border border-border rounded-xl transition-colors font-heading"
           >
             <Download className="w-4 h-4" />
