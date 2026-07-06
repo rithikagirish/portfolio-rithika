@@ -6,19 +6,16 @@ interface SeoProps {
   path: string;
 }
 
-const BASE = "https://blank-canvas-start-3045.lovable.app";
-
 export const Seo = ({ title, description, path }: SeoProps) => {
-  const url = `${BASE}${path}`;
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href={url} />
+      <link rel="canonical" href={path} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content={url} />
-      <meta property="og:site_name" content="Lovable" />
+      <meta property="og:url" content={path} />
+      <meta property="og:site_name" content="Rithika Girish" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
     </Helmet>
