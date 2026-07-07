@@ -134,7 +134,7 @@ const Hero = () => {
           </a>
           <a
             href={resumeAsset.url}
-            download
+            download="G-Rithika-Resume.pdf"
             className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-foreground bg-secondary hover:bg-secondary/80 border border-border rounded-xl transition-colors font-heading"
           >
             <Download className="w-4 h-4" />
