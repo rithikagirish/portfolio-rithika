@@ -11,12 +11,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "DeepShield",
-    description: "Multimodal deepfake detection system achieving 94% accuracy. Combines EfficientNetB0 image analysis with CNN+MFCC audio features, served via a FastAPI backend with sub-500ms inference.",
-    tags: ["Python", "TensorFlow", "FastAPI", "OpenCV", "CNN"],
-    href: "https://github.com/rithikagirish",
-  },
-  {
     title: "AI Mental Wellness Chatbot",
     description: "Flask-based conversational AI using Meta-Llama via Groq API for emotion-aware support. Includes sentiment analysis, conversation memory, and adaptive responses tailored to emotional context.",
     tags: ["Flask", "LLMs", "Groq API", "NLP", "Sentiment Analysis"],
@@ -32,14 +26,14 @@ const projects: Project[] = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="px-4 md:px-8 py-10 md:py-14">
+    <section id="other-projects" className="px-4 md:px-8 py-10 md:py-14">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-10 font-heading">
-          <WaveText text="Featured projects" />
+          <WaveText text="Other projects" />
         </h2>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
