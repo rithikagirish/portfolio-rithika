@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Hls from "hls.js";
 import { ChevronRight, Download, ArrowDown } from "lucide-react";
 import WaveText from "@/components/ui/wave-text";
-import resumeAsset from "@/assets/rithika-resume.pdf.asset.json";
+import resumeAsset from "@/assets/G_Rithika_Resume(1-07-2026).pdf";
 
 const VIDEO_SRC =
   "https://customer-cbeadsgr09pnsezs.cloudflarestream.com/74cb72d57c6a6d6d7807693d02e6707b/manifest/video.m3u8";
