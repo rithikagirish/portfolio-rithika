@@ -1,0 +1,8 @@
+# Rithika Girish
+
+> Portfolio of G. Rithika — a Computer Science Engineering student and AI/ML & Full-Stack Developer building LLM-powered systems, deepfake detection pipelines, and production-ready web applications.
+
+## Pages
+
+- [Home](/): Overview, about, skills, experience, featured projects, and contact.
+- [Changelog](/changelog): Notable updates to the portfolio and projects.
