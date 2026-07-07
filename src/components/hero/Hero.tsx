@@ -111,6 +111,7 @@ const Hero = () => {
         {/* Headline */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tighter mb-6 font-heading">
           <WaveText text="G. Rithika" />
+          <span className="sr-only"> — AI/ML Engineer & Full-Stack Developer</span>
         </h1>
 
         {/* Subheadline */}
