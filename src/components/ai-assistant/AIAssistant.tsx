@@ -12,7 +12,7 @@ const contactLinks = [
     icon: Linkedin,
     label: "LinkedIn",
     value: "G Rithika",
-    href: "https://linkedin.com/g-rithika0512",
+    href: "https://linkedin.com/in/g-rithika0512",
   },
   {
     icon: Github,
