@@ -1,73 +1,130 @@
-# Welcome to your Lovable project
+# 🌐 Rithika's Portfolio
 
-## Project info
+A modern, responsive, and interactive portfolio website showcasing my projects, technical skills, experience, and achievements as a Computer Science Engineering student passionate about AI, Machine Learning, and Full-Stack Development.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+🔗 **Live Demo:** https://portfolio-rithika-mu.vercel.app/
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- Modern responsive UI
+- Smooth animations and transitions
+- Interactive project showcase
+- Experience & education timeline
+- Technical skills section
+- Downloadable resume
+- Contact section
+- Optimized for desktop, tablet, and mobile devices
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tech Stack
 
-**Use your preferred IDE**
+### Frontend
+- React
+- TypeScript
+- Vite
+- HTML5
+- CSS3
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Styling
+- Tailwind CSS
+- shadcn/ui
+- Framer Motion
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Icons & UI
+- Lucide React
 
-Follow these steps:
+### Deployment
+- Vercel
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📂 Portfolio Sections
 
-# Step 3: Install the necessary dependencies.
-npm i
+- Home
+- About Me
+- Skills
+- Experience
+- Projects
+- Achievements
+- Resume
+- Contact
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+---
+
+## 🚀 Featured Projects
+
+### DeepShield
+AI-powered multimodal deepfake detection system using computer vision and audio analysis.
+
+**Tech:** Python, TensorFlow, FastAPI, OpenCV, Librosa
+
+---
+
+### AI Mental Wellness Chatbot
+LLM-powered chatbot providing mental wellness support using modern AI APIs.
+
+**Tech:** Python, Flask, Groq API, Meta Llama
+
+---
+
+### XML File Modifier
+Desktop application developed during my internship to automate XML modifications.
+
+**Tech:** Python, Tkinter, ElementTree
+
+---
+
+## 💻 Getting Started
+
+Clone the repository
+
+```bash
+git clone https://github.com/rithikagirish/portfolio-rithika.git
+```
+
+Navigate to the project
+
+```bash
+cd portfolio-rithika
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run locally
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Build for production
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run build
+```
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📫 Contact
 
-## What technologies are used for this project?
+**Rithika Girish**
 
-This project is built with:
+- Portfolio: https://portfolio-rithika-mu.vercel.app/
+- GitHub: https://github.com/rithikagirish
+- LinkedIn: https://www.linkedin.com/in/rithikagirish/
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 📄 License
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+This project is open source and available under the MIT License.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+⭐ If you like this project, consider giving it a star!
